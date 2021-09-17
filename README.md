@@ -1,10 +1,10 @@
-# prueba-app-js-meteo
+# app-js-meteo
 
 Este proyecto fué desarrollado en su parte `Front` con [Angular CLI](https://github.com/angular/angular-cli) version 14.15.5
 
 La parte `Back` con [Node.js](https://nodejs.org/es/download/releases/) version 11.2.1.
 
-## Herramientas utilizadas: 🛠️
+## Herramientas utilizadas:
 
 * [npm](http://www.dropwizard.io/1.0.2/docs/) - Node Package Manager v6.14.11
 * [NGX Charts](https://swimlane.gitbook.io/ngx-charts/installing) - Librería para representación de gráficas en Angular
