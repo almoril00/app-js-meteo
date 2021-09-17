@@ -28,3 +28,4 @@ Ejecutar `ng serve` y navegar en `http://localhost:4200/`. La aplicación recarg
 
 ---
 
+![Imagen del proyecto](https://github.com/almoril00/app-js-meteo/raw/main/angular/readme.jpg)
