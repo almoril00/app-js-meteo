@@ -1,0 +1,66 @@
+<div class="container" style="max-width: 80%">
+    <div class="row justify-content-center">
+        <div class="row justify-content-center">
+            <div class="card bg-secondary mb-3">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Hora actual</th>
+                                <th scope="col">Última consulta</th>
+                                <th scope="col">Temperatura (dK)</th>
+                                <th scope="col">Potencia (MW)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-active">
+                                <th scope="row">{{horaActual}}</th>
+                                <td>{{valorTemperatura.time}}</td>
+                                <td class="text-success">{{valorTemperatura.value}}</td>
+                                <td class="text-danger">{{valorPotencia.value}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <!-- Card -->
+            <div class="card bg-secondary mb-3">
+                <div class="card-header" style="background: #90c092a4">TEMPERATURA</div>
+                <div class="card-body">
+                    <!-- Mostrar mensaje de advertencia no datos en gráfica -->
+                    <div *ngIf="mensajeTemperatura" class="alert alert-dismissible alert-warning mt-2">
+                        <p>{{mensajeTemperatura}}</p>
+                    </div>
+                    <!-- Gráfica Temperatura -->
+                    <div class="wrapper">
+                        <ngx-charts-line-chart [scheme]="colorScheme1" [legend]="legend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabelTemp" [yAxisLabel]="yAxisLabelTemp" [timeline]="timeline" [results]="chartTemperatura"
+                            [autoScale]="true">
+                        </ngx-charts-line-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <!-- Card -->
+            <div class="card bg-secondary mb-3">
+                <div class="card-header" style="background: #da9696a4">ENERGÍA CONSUMIDA</div>
+                <div class="card-body">
+                    <!-- Mostrar mensaje de advertencia no datos en gráfica -->
+                    <div *ngIf="mensajeTemperatura" class="alert alert-dismissible alert-warning mt-2">
+                        <p>{{mensajePotencia}}</p>
+                    </div>
+                    <!-- Gráfica Potencia -->
+                    <div class="wrapper">
+                        <ngx-charts-line-chart [scheme]="colorScheme2" [legend]="legend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabelPote" [yAxisLabel]="yAxisLabelPote" [timeline]="timeline" [results]="chartPotencia"
+                            [autoScale]="true">
+                        </ngx-charts-line-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

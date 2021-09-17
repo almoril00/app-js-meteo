@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background: #d4dae0a4;
+    margin-top: 20px;
+}
+
+.wrapper {
+    display: block;
+    min-height: 250px;
+}
