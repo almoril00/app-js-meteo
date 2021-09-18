@@ -104,4 +104,4 @@ typings/
 #dist  #Incluir carpeta 'dist'
 
 # Recursos
-__recursos/
+_recursos/

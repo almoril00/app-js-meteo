@@ -24,7 +24,9 @@ Responderá a peticiones GET de Angular con el siguiente formato:
 
 ## FRONT (angular) | Ejecución:
 
-Ejecutar `ng serve` y navegar en `http://localhost:4200/`. La aplicación recargará automáticamente si se cambia alguno de los archivos fuente.
+Ejecutar `npm install` para reconstruir carpeta `"node_modules"`.
+
+Arrancar app ejecutando `ng serve` y navegar en `http://localhost:4200/`. La aplicación recargará automáticamente si se cambia alguno de los archivos fuente.
 
 ---
 
