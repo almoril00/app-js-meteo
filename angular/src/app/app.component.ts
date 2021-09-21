@@ -120,18 +120,18 @@ export class AppComponent implements OnInit{
   private procesarTemperatura(tiempo:string, val: number):void{
     let valorMedioT : number = 0
 
-    if (!(val==null || val==-1)) {
+    if (!(val==null)) {
         this.TempeValoresProcesados.push(val)
-        console.log("TEMPE | Valores recibido: " + val);
+        console.log("TEMPE | Valor procesado: " + val);
     }
     this.TempeContadorIteraciones += 1       
 
     if (this.TempeContadorIteraciones == 12){          // ==12 un minuto (entra cada 5 segundos)
       let nuevoValorT = new Values
      
-      if (this.TempeValoresProcesados.length == 0){   // Si no recoje valor devuelve 0 a la gráfica
-        nuevoValorT.name = tiempo
-        nuevoValorT.value = null
+      if (this.TempeValoresProcesados.length == 0){    // Si no recoje valor devuelve "" a la gráfica
+        nuevoValorT.name = tiempo.slice(0, 5)
+        nuevoValorT.value = ""
       }
       else{
         for (let i=0; i<this.TempeValoresProcesados.length; i++) {
@@ -161,7 +161,7 @@ export class AppComponent implements OnInit{
   private procesarPotencia(tiempo:string, val: string):void{
     let valorMedioP : number = 0
     
-    if (!(val==null || val=="-1")) {
+    if (!(val==null || val=="")) {
         this.PotenValoresProcesados.push(parseFloat(val))
         console.log("POTEN | Valor procesado: " + val);
     }
@@ -170,9 +170,9 @@ export class AppComponent implements OnInit{
     if (this.PotenContadorIteraciones == 12){          // ==12 un minuto (entra cada 5 segundos)
       let nuevoValorP = new Values
 
-      if (this.PotenValoresProcesados.length == 0){   // Si no recoje valor devuelve 0 a la gráfica
-        nuevoValorP.name = tiempo
-        nuevoValorP.value = 0
+      if (this.PotenValoresProcesados.length == 0){    // Si no recoje valor devuelve "" a la gráfica
+        nuevoValorP.name = tiempo.slice(0, 5)
+        nuevoValorP.value = ""
       }
       else{
         for (let i=0; i<this.PotenValoresProcesados.length; i++) {

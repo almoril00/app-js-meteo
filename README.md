@@ -31,3 +31,4 @@ Arrancar app ejecutando `ng serve` y navegar en `http://localhost:4200/`. La apl
 ---
 
 ![Imagen del proyecto](https://github.com/almoril00/app-js-meteo/raw/main/angular/readme.jpg)
+

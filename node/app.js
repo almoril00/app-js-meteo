@@ -31,8 +31,8 @@ function buscarValorTemperaturaTiempo(hora) {
             break
         }
     }
-    if (indiceDeTiempo == -1) { //Devuelve -1 si no encuentra el tiempo solicitado
-        return indiceDeTiempo
+    if (indiceDeTiempo == -1) { //Devuelve null si no encuentra el tiempo solicitado
+        return null
     }
     return datos.temperature.values[indiceDeTiempo].value
 }
@@ -47,8 +47,9 @@ function buscarValorPotenciaTiempo(hora) {
             break
         }
     }
-    if (indiceDeTiempo == -1) { //Devuelve "-1" si no encuentra el tiempo solicitado
-        return indiceDeTiempo.toString
+    if (indiceDeTiempo == -1) { //Devuelve null si no encuentra el tiempo solicitado
+        //return indiceDeTiempo.toString
+        return null
     }
     return datos.power.values[indiceDeTiempo].value
 }
@@ -96,6 +97,16 @@ app.listen(3000, () => {
     console.log("El servidor está inicializado en el puerto 3000");
     cargarDatosYML()
 });
+
+
+
+
+
+
+
+
+
+
 
 
 
